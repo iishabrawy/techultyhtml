@@ -1,0 +1,36 @@
+@function aspect-ratio-height($x, $y, $width: 100%) {
+    @return ($y / $x) * $width;
+}
+@mixin aspect-ratio-box($x, $y, $width: 100%) {
+    // To get this working, position the child element
+    // to 'absolute' in the top left corner
+    width: $width;
+    padding-bottom: aspect-ratio-height($x, $y, $width);
+    position: relative;
+    overflow: hidden;
+    // updated
+    display: block;
+    height: 0;
+}
+
+.respomedia__peice {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.respomedia__peice--stretch {
+  width: 100%;
+  height: 100%;
+}
+.respomedia {
+  @include aspect-ratio-box(16,9);
+  > img,
+  > object,
+  > embed,
+  > iframe,
+  > video {
+    @extend .respomedia__peice;
+    @extend .respomedia__peice--stretch;
+  }
+}

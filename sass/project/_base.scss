@@ -1,0 +1,44 @@
+* {
+  @include box-sizing(border-box);
+}
+
+html {
+  font: 400 14px "Droid Arabic Naskh", Tahoma, sans-serif;
+  color: $prj-color--gray-dark;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Droid Arabic Kufi", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: $prj-color--blue-royal;
+  &:hover,
+  &:focus {
+    color: $prj-color--orange;
+  }
+
+
+  @include transition-property(background, color, border, opacity);
+  @include transition-duration(0.5s);
+  // @include transition-delay(0, 0, 0.3s);
+}
+
+blockquote {
+  border-left: 7px solid $prj-color--gray-silver;
+  background-color: $prj-color--gray-light;
+  @extend %u-paddingAS;
+  @extend %u-marginSN;
+}
+
+hr {
+  border-color: $prj-color--gray-silver;
+}

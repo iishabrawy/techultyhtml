@@ -1,0 +1,141 @@
+// ============================================
+// Header
+// ============================================
+.header {
+  background: $prj-color--gray-light;
+  @include background-image(linear-gradient(top, $prj-color--gray-light, $prj-color--gray-lighter));
+}
+.header__head {
+}
+
+// siteinfo navigation
+// ==============================================
+.column--siteinfo {
+  @extend %GColumn--oppos;
+}
+
+.nav--siteinfo {
+  a {
+    color: $prj-color--gray-mute;
+    &:hover,
+    &:focus {
+      color: $prj-color--gray-dark;
+    }
+  }
+}
+
+// header logo
+// ==============================================
+.column--brand {
+  @extend %u-span6;
+}
+.brand {
+  @extend %u-marginVM;
+}
+.brand__logo {
+  @include u-display(inline-block);
+}
+
+// header footer
+// ==============================================
+.header__foot {
+  background: $prj-color--blue-royal;
+  // border-bottom: 3px solid $prj-color--blue-royal;
+}
+.column--nav-main {
+  @extend %u-span12;
+}
+
+.navbar--main {
+  position: relative;
+  // bottom: -3px;
+}
+.nav--main {
+
+  .nav__item > a {
+    font-family: "Droid Arabic Kufi", sans-serif;
+    color: white;
+    // background: $prj-color--blue-royal;
+    // border-bottom: 3px solid transparent;
+  }
+
+  .nav__item--active > a {
+    background: $prj-color--blue-royal-medium;
+    position: relative;
+    box-shadow: $prj-color--night 0 -2px 2px 0;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: $prj-color--orange;
+    }
+  }
+
+  // .nav__item--open > a,
+  .nav__item--hover > a,
+  // state of an item's 'anchor' when hovering its children
+  .nav__item:hover > a,
+  .nav__item > a:hover,
+  .nav__item > a:focus {
+    background: $prj-color--night;
+  }
+
+  // .Menu {
+  //   background: $prj-colorGrayBlacky;
+
+  //   .nav__item > a {
+  //     color: white;
+  //   }
+
+  //   // .nav__item--open > a,
+  //   .nav__item--hover > a,
+  //   .nav__item:hover > a,
+  //   .nav__item > a:hover,
+  //   .nav__item > a:focus {
+  //     background: $prj-colorCrimson;
+  //   }
+  // }
+
+  .nav__sub {
+    @extend %u-span2Fixed;
+    @include box-shadow(rgba($prj-color--gray-dark, 0.2) 0 1px 2px 0);
+  }
+
+  .search {
+    @extend %u-span4Fixed;
+    @extend %u-paddingAS;
+    background: white;
+  }
+}
+
+.search__form {
+  position: relative;
+}
+
+.search__label {
+  @extend %u-visHidden;
+}
+.search__button,
+.search__input {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.search__input {
+  @extend %u-span12;
+  // border-bottom: 1px solid $prj-color--gray-smoke;
+}
+.search__button {
+  position: absolute;
+  padding: 0 .5em;
+  line-height: 2;
+  top: 0;
+  left: 0;
+}
+
+
+

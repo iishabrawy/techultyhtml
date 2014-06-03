@@ -1,0 +1,87 @@
+.section--featured  {
+
+}
+
+.column--featured {
+  @extend %u-span9;
+}
+
+.featured {
+  @extend %GCell;
+  @extend %u-span6;
+  position: relative;
+  @extend %u-paddingHS;
+  @extend %u-marginBL;
+}
+
+.featured__inner{
+  background: white;
+  box-shadow: $prj-color--gray-blue 0 0 1px 0;
+}
+
+.featured__main {
+  background: white;
+  @extend %u-paddingAM;
+  @extend %u-marginHM;
+  position: relative;
+}
+
+.featured__header {
+
+}
+
+.featured__title {
+  @extend %H--h4;
+}
+
+.featured__content {
+}
+
+.featured__excerpt {
+
+}
+
+.featured__more {
+
+}
+
+.featured--first {
+  @extend %u-span12;
+  .featured__title {
+    @extend %H--h3;
+  }
+
+  .featured__main {
+    margin-top: -112px;
+  }
+}
+
+
+.featured__cover {
+  @extend .respomedia;
+  background: $prj-color--blue;
+}
+
+.featured__overlay {
+  display: block;
+
+
+  // z-index: 1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+
+  @include opacity(0.3);
+  background: $prj-color--gray-hard;
+  // @include background-image(linear-gradient(right bottom, $prj-color--blue, $prj-color--purple));
+  // background-size: 100% 100%;
+  .featured:hover &,
+  &:hover,
+  &:focus {
+    @include opacity(0.1);
+  }
+}
+
+
+

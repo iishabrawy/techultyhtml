@@ -1,0 +1,45 @@
+// Nav
+.nav {
+  @extend %Nav;
+  li > a {
+    white-space: nowrap;
+  }
+  li.nav__item--oppos {
+    @extend %u-floatOppos;
+  }
+}
+
+.nav--small {
+  li > a {
+    padding: .5em .75em;
+  }
+}
+
+.nav--medium {
+  li > a {
+    padding: .5em 1em;
+  }
+  @extend %H--h5;
+}
+
+
+
+.nav__item--hover {
+  @extend %Nav__item--hover;
+}
+
+.nav__item--sub-full {
+  @extend %Nav__item--sub-full;
+}
+
+.navly {
+  @extend %Navly;
+}
+
+.nav__sub {
+  @extend %Nav__sub;
+}
+.nav__sub--oppos {
+  @extend %Nav__sub--oppos;
+}
+

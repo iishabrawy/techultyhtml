@@ -1,0 +1,28 @@
+// LAYOUT
+.wrapper {
+  @extend %GWrapper;
+  min-height: 2000px;
+}
+.container {
+  @extend %GContainer;
+}
+.zone {
+  @extend %GZone;
+}
+.column {
+  @extend %GColumn;
+  display: block;
+}
+.cell {
+  @extend %GCell;
+}
+.column--oppos {
+  @extend %GColumn--oppos;
+}
+.column--center {
+  @extend %GColumn--center;
+}
+
+.column--gutter {
+  @extend %u-paddingHS;
+}
