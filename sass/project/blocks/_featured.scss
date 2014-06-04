@@ -4,7 +4,6 @@
 }
 
 .section--featured  {
-  background: $prj-color--gray-lighter;
   background: white;
   box-shadow: $prj-color--gray-blue 0 0 1px 0;
   @extend %u-marginBL;
@@ -15,89 +14,14 @@
   @extend %u-span1of3;
 }
 
-.featured__cover{
-  @extend %u-paddingHS;
-  @extend %u-marginVS;
-}
-
-.featured__main {
-  @extend %u-paddingHS;
-  @extend %u-marginVS;
-  position: relative;
-}
-
-.featured__title {
-  @include u-fontSize(14px);
-  line-height: 1.6;
-  margin: 0;
-}
-
-.featured__head {
-  @extend %u-marginBS;
-}
-
-.featured__content {
-
-}
-
-.featured__excerpt {
-
-}
-
-.featured__more {
-
-}
-
-.featured__media {
-  @extend .respomedia;
-  background: $prj-color--gray-silver;
-  img {
-    height: auto;
-  }
-}
-
-.featured__overlay {
-  display: block;
-
-  // z-index: 1;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-
-  @include opacity(0.3);
-  background: $prj-color--gray-hard;
-  // @include background-image(linear-gradient(right bottom, $prj-color--blue, $prj-color--purple));
-  // background-size: 100% 100%;
-  .featured:hover &,
-  &:hover,
-  &:focus {
-    @include opacity(0.1);
-  }
-}
-
 .featured--first {
-  @extend %u-span12;
-  background: white;
   border-bottom: 1px solid $prj-color--gray-silver;
-
-  .featured__inner {
-    @extend %GZone;
-  }
-
-  .featured__main {
-    @extend %GColumn;
+  .postcard__main {
     @extend %u-span1of3;
   }
-  .featured__cover {
-    @extend %GColumn;
-    @extend %GColumn--oppos;
+  .postcard__cover {
     @extend %u-span2of3;
-  }
-
-  .featured__title {
-    @include u-fontSize(21px);
-    line-height: 1.6;
+    @extend %GColumn--oppos;
   }
 }
 

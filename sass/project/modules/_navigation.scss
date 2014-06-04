@@ -8,6 +8,12 @@
     @extend %u-floatOppos;
   }
 }
+.menu {
+  @extend %Menu;
+  li > a {
+    white-space: nowrap;
+  }
+}
 .navline {
   @extend %Navline;
   li > a {
@@ -22,8 +28,9 @@
 }
 .nav--smaller {
   li > a {
-    padding: .5em 0 .5em 1em;
+    padding: .5em;
   }
+  @include u-fontSize(12px);
 }
 
 .nav--medium {

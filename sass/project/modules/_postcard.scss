@@ -1,0 +1,134 @@
+.postcard {
+}
+.postcard__cover{
+  @extend %u-paddingHS;
+  @extend %u-marginVS;
+}
+
+.postcard__main {
+  @extend %u-paddingHS;
+  @extend %u-marginVS;
+}
+
+.postcard__title {
+  @include u-fontSize(14px);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.postcard__head {
+  @extend %u-marginBS;
+}
+
+.postcard__media {
+  @extend .respomedia;
+  -webkit-transform: translateZ(0);// fixes "shaky images durring css transition" bug on webkit browsers
+  background: $prj-color--gray-silver;
+  img {
+    // float: right;
+    height: auto;
+  }
+}
+
+.postcard__overlay {
+  display: block;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+
+  @include opacity(0.3);
+  background: $prj-color--gray-hard;
+  &:hover,
+  &:focus {
+    @include opacity(0.1);
+  }
+}
+
+.postcard--primary {
+  @extend %u-span12;
+
+  .postcard__inner {
+    @extend %GZone;
+  }
+
+  .postcard__main {
+    @extend %GColumn;
+    position: static;
+  }
+
+  .postcard__cover {
+    @extend %GColumn;
+  }
+
+  .postcard__title {
+    @include u-fontSize(21px);
+    line-height: 1.6;
+  }
+
+}
+
+
+@mixin postcard__taxo ($color) {
+  .postcard__taxo-label {
+    background: $color;
+  }
+  .postcard__taxo-link {
+    border-color: darken($color,5%);
+  }
+}
+
+.postcard__taxo {
+  position: absolute;
+  float: right;
+  top: 7px;
+  left: 21px;
+}
+
+.postcard__taxo-link,
+.postcard__taxo-label {
+  display: inline-block;
+}
+
+.postcard__taxo-label {
+  @include u-inlineBlockSize(1);
+  @include translate(0,-80%);
+  @include transition-property(transform);
+  @include transition-duration(0.3s);
+  -webkit-backface-visibility: hidden;
+}
+
+.postcard__taxo-link {
+  border-radius: 0;
+  color: white;
+  border-top: 7px solid;
+  &:hover,
+  &:focus {
+    color: white;
+    .postcard__taxo-label {
+      @include translate(0,0);
+    }
+  }
+  overflow: hidden;
+}
+
+$taxos: (
+  'design' $prj-color--green-sea,
+  'frontend' $prj-color--blue,
+  'backend' $prj-color--purple,
+  'content' $prj-color--gray-hard,
+  'tools' $prj-color--night,
+  'business' $prj-color--orange
+);
+@each $taxo in $taxos {
+  $name: nth($taxo, 1);
+  $color: nth($taxo, 2);
+  .postcard--#{$name} {
+    @include postcard__taxo($color);
+  }
+}
+
+
+
+
