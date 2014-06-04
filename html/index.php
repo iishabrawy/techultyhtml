@@ -57,7 +57,7 @@
       <div class="container header__head">
         <div class="column column--siteinfo column--gutter">
           <nav class="navbar">
-            <ul class="nav nav--siteinfo nav--small">
+            <ul class="nav nav--siteinfo nav--small nav--muted">
               <li class="nav__item"><a href="#">عن الكلية</a></li>
               <li class="nav__item"><a href="#">تواصل معنا</a></li>
               <li class="nav__item"><a href="#">كيف تدعمنا؟</a></li>

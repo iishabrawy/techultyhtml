@@ -1,0 +1,39 @@
+.button {
+  @extend %Button;
+  border-radius: 4px;
+}
+
+
+// sizes
+.button--large {
+  @include u-fontSize($uni-baseFontSize * 1.2);
+}
+
+
+// themes
+.button--wire {
+  border: 2px solid;
+}
+.button--primary {
+  color: white;
+  background: $prj-color--orange;
+  &:hover,
+  &:focus {
+    color: white;
+    background: $prj-color--blue-royal;
+  }
+}
+
+.button--primary-alt {
+  color: white;
+  background: $prj-color--blue-royal;
+  &:hover,
+  &:focus {
+    color: white;
+    background: $prj-color--orange;
+  }
+}
+
+.button--secondary {
+  background: $prj-color--gray-smoke;
+}

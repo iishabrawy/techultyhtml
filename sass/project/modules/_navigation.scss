@@ -8,10 +8,21 @@
     @extend %u-floatOppos;
   }
 }
+.navline {
+  @extend %Navline;
+  li > a {
+    white-space: nowrap;
+  }
+}
 
 .nav--small {
   li > a {
     padding: .5em .75em;
+  }
+}
+.nav--smaller {
+  li > a {
+    padding: .5em 0 .5em 1em;
   }
 }
 
@@ -43,3 +54,14 @@
   @extend %Nav__sub--oppos;
 }
 
+
+.nav--muted {
+  color: $prj-color--gray-mute;
+  a {
+    color: $prj-color--gray-mute;
+    &:hover,
+    &:focus {
+      color: $prj-color--gray-dark;
+    }
+  }
+}

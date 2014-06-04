@@ -2,8 +2,8 @@
 // Header
 // ============================================
 .header {
-  background: $prj-color--gray-light;
-  @include background-image(linear-gradient(top, $prj-color--gray-light, $prj-color--gray-lighter));
+  background: $prj-color--gray-lighter;
+  // @include background-image(linear-gradient(top, $prj-color--gray-light, $prj-color--gray-lighter));
 }
 .header__head {
 }
@@ -15,13 +15,7 @@
 }
 
 .nav--siteinfo {
-  a {
-    color: $prj-color--gray-mute;
-    &:hover,
-    &:focus {
-      color: $prj-color--gray-dark;
-    }
-  }
+
 }
 
 // header logo
@@ -109,6 +103,8 @@
     @extend %u-span4Fixed;
     @extend %u-paddingAS;
     background: white;
+    top: auto;
+    bottom: 100%;
   }
 }
 
