@@ -774,7 +774,8 @@ blockquote, .nav--main .search {
 }
 
 /* line 180, ../../../../univercss/Modules/Grid/_mixins.scss */
-.column, .postcard--primary .postcard__main, .postcard--primary .postcard__cover {
+.column, .postcard--primary .postcard__cover,
+.postcard--primary .postcard__main {
   position: relative;
   float: right;
 }
@@ -993,7 +994,7 @@ hr {
   background: #eaeaea;
 }
 
-/* line 13, ../../../sass/project/modules/_postcard.scss */
+/* line 15, ../../../sass/project/modules/_postcard.scss */
 .postcard__title {
   font-size: 14px;
   font-size: 1rem;
@@ -1001,59 +1002,50 @@ hr {
   margin: 0;
 }
 
-/* line 23, ../../../sass/project/modules/_postcard.scss */
+/* line 25, ../../../sass/project/modules/_postcard.scss */
 .postcard__media {
   -webkit-transform: translateZ(0);
   background: #e0e0e0;
+  box-shadow: #bababa 0 0 1px 0;
+  border-top: 4px solid;
 }
-/* line 27, ../../../sass/project/modules/_postcard.scss */
+/* line 32, ../../../sass/project/modules/_postcard.scss */
 .postcard__media img {
   height: auto;
 }
-
-/* line 33, ../../../sass/project/modules/_postcard.scss */
-.postcard__overlay {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
-  opacity: 0.3;
-  background: #737373;
-}
-/* line 44, ../../../sass/project/modules/_postcard.scss */
-.postcard__overlay:hover, .postcard__overlay:focus {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
-  opacity: 0.1;
+/* line 36, ../../../sass/project/modules/_postcard.scss */
+.postcard__media:hover, .postcard__media:focus {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
 }
 
-/* line 56, ../../../sass/project/modules/_postcard.scss */
+/* line 49, ../../../sass/project/modules/_postcard.scss */
+.postcard--primary .postcard__cover,
 .postcard--primary .postcard__main {
   position: static;
 }
-/* line 65, ../../../sass/project/modules/_postcard.scss */
+/* line 54, ../../../sass/project/modules/_postcard.scss */
 .postcard--primary .postcard__title {
   font-size: 21px;
   font-size: 1.5rem;
   line-height: 1.6;
 }
 
-/* line 82, ../../../sass/project/modules/_postcard.scss */
+/* line 72, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo {
   position: absolute;
   float: right;
-  top: 7px;
-  left: 21px;
+  top: 14px;
+  left: 14px;
 }
 
-/* line 90, ../../../sass/project/modules/_postcard.scss */
+/* line 80, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link,
 .postcard__taxo-label {
   display: inline-block;
 }
 
-/* line 94, ../../../sass/project/modules/_postcard.scss */
+/* line 84, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-label {
   padding: 0 1em;
   line-height: 3;
@@ -1073,18 +1065,18 @@ hr {
   -webkit-backface-visibility: hidden;
 }
 
-/* line 102, ../../../sass/project/modules/_postcard.scss */
+/* line 92, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link {
   border-radius: 0;
   color: white;
-  border-top: 7px solid;
+  border-top: 4px solid;
   overflow: hidden;
 }
-/* line 107, ../../../sass/project/modules/_postcard.scss */
+/* line 98, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link:hover, .postcard__taxo-link:focus {
   color: white;
 }
-/* line 109, ../../../sass/project/modules/_postcard.scss */
+/* line 100, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link:hover .postcard__taxo-label, .postcard__taxo-link:focus .postcard__taxo-label {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
@@ -1093,58 +1085,82 @@ hr {
   transform: translate(0, 0);
 }
 
-/* line 74, ../../../sass/project/modules/_postcard.scss */
+/* line 63, ../../../sass/project/modules/_postcard.scss */
 .postcard--design .postcard__taxo-label {
-  background: seagreen;
+  background: #349e63;
 }
-/* line 77, ../../../sass/project/modules/_postcard.scss */
+/* line 67, ../../../sass/project/modules/_postcard.scss */
 .postcard--design .postcard__taxo-link {
-  border-color: #28784b;
+  border-color: seagreen;
+}
+/* line 120, ../../../sass/project/modules/_postcard.scss */
+.postcard--design .postcard__media {
+  border-color: seagreen;
 }
 
-/* line 74, ../../../sass/project/modules/_postcard.scss */
+/* line 63, ../../../sass/project/modules/_postcard.scss */
 .postcard--frontend .postcard__taxo-label {
-  background: #287eaa;
+  background: #2d8dbf;
 }
-/* line 77, ../../../sass/project/modules/_postcard.scss */
+/* line 67, ../../../sass/project/modules/_postcard.scss */
 .postcard--frontend .postcard__taxo-link {
-  border-color: #236f95;
+  border-color: #287eaa;
+}
+/* line 120, ../../../sass/project/modules/_postcard.scss */
+.postcard--frontend .postcard__media {
+  border-color: #287eaa;
 }
 
-/* line 74, ../../../sass/project/modules/_postcard.scss */
+/* line 63, ../../../sass/project/modules/_postcard.scss */
 .postcard--backend .postcard__taxo-label {
-  background: #7b5294;
+  background: #895ba4;
 }
-/* line 77, ../../../sass/project/modules/_postcard.scss */
+/* line 67, ../../../sass/project/modules/_postcard.scss */
 .postcard--backend .postcard__taxo-link {
-  border-color: #6d4984;
+  border-color: #7b5294;
+}
+/* line 120, ../../../sass/project/modules/_postcard.scss */
+.postcard--backend .postcard__media {
+  border-color: #7b5294;
 }
 
-/* line 74, ../../../sass/project/modules/_postcard.scss */
+/* line 63, ../../../sass/project/modules/_postcard.scss */
 .postcard--content .postcard__taxo-label {
-  background: #737373;
+  background: gray;
 }
-/* line 77, ../../../sass/project/modules/_postcard.scss */
+/* line 67, ../../../sass/project/modules/_postcard.scss */
 .postcard--content .postcard__taxo-link {
-  border-color: #666666;
+  border-color: #737373;
+}
+/* line 120, ../../../sass/project/modules/_postcard.scss */
+.postcard--content .postcard__media {
+  border-color: #737373;
 }
 
-/* line 74, ../../../sass/project/modules/_postcard.scss */
+/* line 63, ../../../sass/project/modules/_postcard.scss */
 .postcard--tools .postcard__taxo-label {
-  background: #34495e;
+  background: #3d566e;
 }
-/* line 77, ../../../sass/project/modules/_postcard.scss */
+/* line 67, ../../../sass/project/modules/_postcard.scss */
 .postcard--tools .postcard__taxo-link {
-  border-color: #2b3c4e;
+  border-color: #34495e;
+}
+/* line 120, ../../../sass/project/modules/_postcard.scss */
+.postcard--tools .postcard__media {
+  border-color: #34495e;
 }
 
-/* line 74, ../../../sass/project/modules/_postcard.scss */
+/* line 63, ../../../sass/project/modules/_postcard.scss */
 .postcard--business .postcard__taxo-label {
-  background: #d44736;
+  background: #d85a4b;
 }
-/* line 77, ../../../sass/project/modules/_postcard.scss */
+/* line 67, ../../../sass/project/modules/_postcard.scss */
 .postcard--business .postcard__taxo-link {
-  border-color: #c63b2a;
+  border-color: #d44736;
+}
+/* line 120, ../../../sass/project/modules/_postcard.scss */
+.postcard--business .postcard__media {
+  border-color: #d44736;
 }
 
 /* line 16, ../../../sass/project/modules/_respomedia.scss */

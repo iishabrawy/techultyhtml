@@ -1,5 +1,7 @@
 .postcard {
+
 }
+
 .postcard__cover{
   @extend %u-paddingHS;
   @extend %u-marginVS;
@@ -22,27 +24,17 @@
 
 .postcard__media {
   @extend .respomedia;
-  -webkit-transform: translateZ(0);// fixes "shaky images durring css transition" bug on webkit browsers
+  // webkit translatZ(0) fixes "shaky images durring css transition" bug on webkit browsers
+  -webkit-transform: translateZ(0);
   background: $prj-color--gray-silver;
+  box-shadow: $prj-color--gray-medium 0 0 1px 0;
+  border-top: 4px solid;
   img {
-    // float: right;
     height: auto;
   }
-}
-
-.postcard__overlay {
-  display: block;
-
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-
-  @include opacity(0.3);
-  background: $prj-color--gray-hard;
   &:hover,
   &:focus {
-    @include opacity(0.1);
+    @include opacity(0.8);
   }
 }
 
@@ -53,13 +45,10 @@
     @extend %GZone;
   }
 
+  .postcard__cover,
   .postcard__main {
     @extend %GColumn;
     position: static;
-  }
-
-  .postcard__cover {
-    @extend %GColumn;
   }
 
   .postcard__title {
@@ -72,18 +61,19 @@
 
 @mixin postcard__taxo ($color) {
   .postcard__taxo-label {
-    background: $color;
+    background: lighten($color,5%);
   }
+
   .postcard__taxo-link {
-    border-color: darken($color,5%);
+    border-color: $color;
   }
 }
 
 .postcard__taxo {
   position: absolute;
   float: right;
-  top: 7px;
-  left: 21px;
+  top: 14px;
+  left: 14px;
 }
 
 .postcard__taxo-link,
@@ -102,7 +92,8 @@
 .postcard__taxo-link {
   border-radius: 0;
   color: white;
-  border-top: 7px solid;
+  border-top: 4px solid;
+
   &:hover,
   &:focus {
     color: white;
@@ -126,6 +117,9 @@ $taxos: (
   $color: nth($taxo, 2);
   .postcard--#{$name} {
     @include postcard__taxo($color);
+    .postcard__media {
+      border-color: $color;
+    }
   }
 }
 
