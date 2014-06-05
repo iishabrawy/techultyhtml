@@ -1,0 +1,24 @@
+.widget {
+  @extend .whitecard;
+  @extend %u-marginBS;
+}
+
+.widget__title {
+  @extend %H--h5;
+  @extend %u-paddingHS;
+  margin: 0;
+  line-height: 2;
+}
+.widget__head {
+  border-bottom: 1px solid $prj-color--gray-smoke;
+}
+
+.widget__copy {
+  @extend %u-paddingAS;
+}
+
+.widget__foot {
+  @extend %u-paddingAS;
+  border-top: 1px solid $prj-color--gray-silver;
+  background: $prj-color--gray-lighter;
+}

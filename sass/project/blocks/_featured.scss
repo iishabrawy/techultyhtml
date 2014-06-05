@@ -4,8 +4,7 @@
 }
 
 .section--featured  {
-  background: white;
-  box-shadow: $prj-color--gray-blue 0 0 1px 0;
+  @extend .whitecard;
   @extend %u-marginBL;
 }
 

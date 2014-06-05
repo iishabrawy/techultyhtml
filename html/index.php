@@ -114,6 +114,20 @@
         <div class="column column--featured">
           <?php include "parts/featured.php"; ?>
         </div>
+
+        <div class="column column--widgets">
+          <div class="widgets">
+            <?php include "parts/widget_social.php"; ?>
+          </div>
+          <div class="widgets">
+            <?php include "parts/widget_taxos.php"; ?>
+          </div>
+          <div class="widgets">
+            <?php include "parts/widget_levels.php"; ?>
+            <?php include "parts/widget_join.php"; ?>
+          </div>
+        </div>
+
       </div>
     </div>
 

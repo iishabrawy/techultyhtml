@@ -9,6 +9,13 @@
   @include u-fontSize($uni-baseFontSize * 1.2);
 }
 
+.button--full {
+  @extend %Button--full;
+}
+
+.button--full-center {
+  @extend %Button--fullCenter;
+}
 
 // themes
 .button--wire {
@@ -36,4 +43,61 @@
 
 .button--secondary {
   background: $prj-color--gray-smoke;
+}
+
+
+$levels: (
+  'bgn' $prj-color--blue,
+  'int' $prj-color--green,
+  'adv' $prj-color--ruby
+);
+@each $level in $levels {
+  $name: nth($level, 1);
+  $color: nth($level, 2);
+  .button--level-#{$name} {
+    color: $color;
+    &:hover,
+    &:focus {
+      color: darken($color, 7%);
+    }
+  }
+  .button--level-#{$name}-rev {
+    color: white;
+    background: $color;
+    &:hover,
+    &:focus {
+      color: white;
+      background: darken($color, 7%);
+    }
+  }
+}
+
+$taxos: (
+  'design' $prj-color--green-sea,
+  'frontend' $prj-color--blue,
+  'backend' $prj-color--purple,
+  'content' $prj-color--gray-hard,
+  'tools' $prj-color--night,
+  'business' $prj-color--orange
+);
+@each $taxo in $taxos {
+  $name: nth($taxo, 1);
+  $color: nth($taxo, 2);
+
+  .button--taxo-#{$name} {
+    color: $color;
+    &:hover,
+    &:focus {
+      color: darken($color, 7%);
+    }
+  }
+  .button--taxo-#{$name}-rev {
+    color: white;
+    background: $color;
+    &:hover,
+    &:focus {
+      color: white;
+      background: darken($color, 7%);
+    }
+  }
 }

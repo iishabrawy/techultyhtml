@@ -34,7 +34,9 @@
   }
   &:hover,
   &:focus {
-    @include opacity(0.8);
+    img {
+      @include opacity(0.8);
+    }
   }
 }
 
@@ -71,17 +73,12 @@
 
 .postcard__taxo {
   position: absolute;
-  float: right;
   top: 14px;
-  left: 14px;
+  left: 28px;
 }
 
-.postcard__taxo-link,
 .postcard__taxo-label {
   display: inline-block;
-}
-
-.postcard__taxo-label {
   @include u-inlineBlockSize(1);
   @include translate(0,-80%);
   @include transition-property(transform);
@@ -90,6 +87,7 @@
 }
 
 .postcard__taxo-link {
+  display: block;
   border-radius: 0;
   color: white;
   border-top: 4px solid;

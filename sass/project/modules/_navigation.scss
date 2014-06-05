@@ -39,6 +39,12 @@
   }
   @extend %H--h5;
 }
+.menu--medium {
+  li > a {
+    padding: .5em;
+  }
+  @extend %H--h5;
+}
 
 
 

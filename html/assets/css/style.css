@@ -588,6 +588,11 @@ blockquote p:last-of-type {
   width: 210px;
 }
 
+/* line 126, ../../../../univercss/Utilities/Rhythm/_mixins.scss */
+.nav--social > li, .column--widgets {
+  width: 25%;
+}
+
 /* line 116, ../../../../univercss/Utilities/Rhythm/_mixins.scss */
 .nav--main .search {
   width: 420px;
@@ -636,7 +641,7 @@ blockquote {
 }
 
 /* line 120, ../../../../univercss/Utilities/Spaces/_mixins.scss */
-.postcard__head {
+.postcard__head, .widget {
   margin-bottom: 14px ;
 }
 
@@ -646,12 +651,12 @@ blockquote {
 }
 
 /* line 120, ../../../../univercss/Utilities/Spaces/_mixins.scss */
-blockquote, .nav--main .search {
+blockquote, .widget__copy, .widget__foot, .nav--main .search {
   padding: 14px ;
 }
 
 /* line 120, ../../../../univercss/Utilities/Spaces/_mixins.scss */
-.column--gutter, .postcard__cover, .postcard__main, .column--featured {
+.column--gutter, .postcard__cover, .postcard__main, .widget__title, .column--featured, .column--widgets {
   padding-left: 14px ;
   padding-right: 14px ;
 }
@@ -748,6 +753,16 @@ blockquote, .nav--main .search {
 /**
  * Make the button inherit sizing from its parent.
  */
+/* line 64, ../../../../univercss/Modules/Button/_mixins.scss */
+.button--full-center, .button--full {
+  width: 100%;
+}
+
+/* line 72, ../../../../univercss/Modules/Button/_mixins.scss */
+.button--full-center {
+  text-align: center;
+}
+
 /* line 89, ../../../../univercss/Modules/Grid/_mixins.scss */
 .wrapper {
   overflow: hidden;
@@ -832,7 +847,7 @@ blockquote, .nav--main .search {
 }
 
 /* line 36, ../../../../univercss/Modules/Heading/_mixins.scss */
-.nav--medium {
+.nav--medium, .menu--medium, .widget__title, .nav--social > li > a {
   font-size: 20px;
   font-size: 1.4285714rem;
   line-height: 1.05;
@@ -938,15 +953,20 @@ hr {
   padding: .5em 1em;
 }
 
-/* line 65, ../../../sass/project/modules/_navigation.scss */
+/* line 43, ../../../sass/project/modules/_navigation.scss */
+.menu--medium li > a {
+  padding: .5em;
+}
+
+/* line 71, ../../../sass/project/modules/_navigation.scss */
 .nav--muted {
   color: darkgrey;
 }
-/* line 67, ../../../sass/project/modules/_navigation.scss */
+/* line 73, ../../../sass/project/modules/_navigation.scss */
 .nav--muted a {
   color: darkgrey;
 }
-/* line 70, ../../../sass/project/modules/_navigation.scss */
+/* line 76, ../../../sass/project/modules/_navigation.scss */
 .nav--muted a:hover, .nav--muted a:focus {
   color: #575858;
 }
@@ -962,36 +982,223 @@ hr {
   font-size: 1.2rem;
 }
 
-/* line 14, ../../../sass/project/modules/_buttons.scss */
+/* line 21, ../../../sass/project/modules/_buttons.scss */
 .button--wire {
   border: 2px solid;
 }
 
-/* line 17, ../../../sass/project/modules/_buttons.scss */
+/* line 24, ../../../sass/project/modules/_buttons.scss */
 .button--primary {
   color: white;
   background: #d44736;
 }
-/* line 21, ../../../sass/project/modules/_buttons.scss */
+/* line 28, ../../../sass/project/modules/_buttons.scss */
 .button--primary:hover, .button--primary:focus {
   color: white;
   background: #4167b1;
 }
 
-/* line 27, ../../../sass/project/modules/_buttons.scss */
+/* line 34, ../../../sass/project/modules/_buttons.scss */
 .button--primary-alt {
   color: white;
   background: #4167b1;
 }
-/* line 31, ../../../sass/project/modules/_buttons.scss */
+/* line 38, ../../../sass/project/modules/_buttons.scss */
 .button--primary-alt:hover, .button--primary-alt:focus {
   color: white;
   background: #d44736;
 }
 
-/* line 37, ../../../sass/project/modules/_buttons.scss */
+/* line 44, ../../../sass/project/modules/_buttons.scss */
 .button--secondary {
   background: #eaeaea;
+}
+
+/* line 57, ../../../sass/project/modules/_buttons.scss */
+.button--level-bgn {
+  color: #287eaa;
+}
+/* line 60, ../../../sass/project/modules/_buttons.scss */
+.button--level-bgn:hover, .button--level-bgn:focus {
+  color: #21698d;
+}
+
+/* line 64, ../../../sass/project/modules/_buttons.scss */
+.button--level-bgn-rev {
+  color: white;
+  background: #287eaa;
+}
+/* line 68, ../../../sass/project/modules/_buttons.scss */
+.button--level-bgn-rev:hover, .button--level-bgn-rev:focus {
+  color: white;
+  background: #21698d;
+}
+
+/* line 57, ../../../sass/project/modules/_buttons.scss */
+.button--level-int {
+  color: #4eba6f;
+}
+/* line 60, ../../../sass/project/modules/_buttons.scss */
+.button--level-int:hover, .button--level-int:focus {
+  color: #40a45f;
+}
+
+/* line 64, ../../../sass/project/modules/_buttons.scss */
+.button--level-int-rev {
+  color: white;
+  background: #4eba6f;
+}
+/* line 68, ../../../sass/project/modules/_buttons.scss */
+.button--level-int-rev:hover, .button--level-int-rev:focus {
+  color: white;
+  background: #40a45f;
+}
+
+/* line 57, ../../../sass/project/modules/_buttons.scss */
+.button--level-adv {
+  color: #da2e75;
+}
+/* line 60, ../../../sass/project/modules/_buttons.scss */
+.button--level-adv:hover, .button--level-adv:focus {
+  color: #c22264;
+}
+
+/* line 64, ../../../sass/project/modules/_buttons.scss */
+.button--level-adv-rev {
+  color: white;
+  background: #da2e75;
+}
+/* line 68, ../../../sass/project/modules/_buttons.scss */
+.button--level-adv-rev:hover, .button--level-adv-rev:focus {
+  color: white;
+  background: #c22264;
+}
+
+/* line 87, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-design {
+  color: seagreen;
+}
+/* line 90, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-design:hover, .button--taxo-design:focus {
+  color: #257046;
+}
+
+/* line 94, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-design-rev {
+  color: white;
+  background: seagreen;
+}
+/* line 98, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-design-rev:hover, .button--taxo-design-rev:focus {
+  color: white;
+  background: #257046;
+}
+
+/* line 87, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-frontend {
+  color: #287eaa;
+}
+/* line 90, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-frontend:hover, .button--taxo-frontend:focus {
+  color: #21698d;
+}
+
+/* line 94, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-frontend-rev {
+  color: white;
+  background: #287eaa;
+}
+/* line 98, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-frontend-rev:hover, .button--taxo-frontend-rev:focus {
+  color: white;
+  background: #21698d;
+}
+
+/* line 87, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-backend {
+  color: #7b5294;
+}
+/* line 90, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-backend:hover, .button--taxo-backend:focus {
+  color: #68457d;
+}
+
+/* line 94, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-backend-rev {
+  color: white;
+  background: #7b5294;
+}
+/* line 98, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-backend-rev:hover, .button--taxo-backend-rev:focus {
+  color: white;
+  background: #68457d;
+}
+
+/* line 87, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-content {
+  color: #737373;
+}
+/* line 90, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-content:hover, .button--taxo-content:focus {
+  color: #616161;
+}
+
+/* line 94, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-content-rev {
+  color: white;
+  background: #737373;
+}
+/* line 98, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-content-rev:hover, .button--taxo-content-rev:focus {
+  color: white;
+  background: #616161;
+}
+
+/* line 87, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-tools {
+  color: #34495e;
+}
+/* line 90, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-tools:hover, .button--taxo-tools:focus {
+  color: #273747;
+}
+
+/* line 94, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-tools-rev {
+  color: white;
+  background: #34495e;
+}
+/* line 98, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-tools-rev:hover, .button--taxo-tools-rev:focus {
+  color: white;
+  background: #273747;
+}
+
+/* line 87, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-business {
+  color: #d44736;
+}
+/* line 90, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-business:hover, .button--taxo-business:focus {
+  color: #be3929;
+}
+
+/* line 94, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-business-rev {
+  color: white;
+  background: #d44736;
+}
+/* line 98, ../../../sass/project/modules/_buttons.scss */
+.button--taxo-business-rev:hover, .button--taxo-business-rev:focus {
+  color: white;
+  background: #be3929;
+}
+
+/* line 1, ../../../sass/project/modules/_whitecard.scss */
+.whitecard, .widget, .section--featured {
+  background: white;
+  box-shadow: #ccd0d2 0 0 1px 0;
+  border-radius: 2px;
 }
 
 /* line 15, ../../../sass/project/modules/_postcard.scss */
@@ -1013,40 +1220,34 @@ hr {
 .postcard__media img {
   height: auto;
 }
-/* line 36, ../../../sass/project/modules/_postcard.scss */
-.postcard__media:hover, .postcard__media:focus {
+/* line 37, ../../../sass/project/modules/_postcard.scss */
+.postcard__media:hover img, .postcard__media:focus img {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
 
-/* line 49, ../../../sass/project/modules/_postcard.scss */
+/* line 51, ../../../sass/project/modules/_postcard.scss */
 .postcard--primary .postcard__cover,
 .postcard--primary .postcard__main {
   position: static;
 }
-/* line 54, ../../../sass/project/modules/_postcard.scss */
+/* line 56, ../../../sass/project/modules/_postcard.scss */
 .postcard--primary .postcard__title {
   font-size: 21px;
   font-size: 1.5rem;
   line-height: 1.6;
 }
 
-/* line 72, ../../../sass/project/modules/_postcard.scss */
+/* line 74, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo {
   position: absolute;
-  float: right;
   top: 14px;
-  left: 14px;
+  left: 28px;
 }
 
 /* line 80, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo-link,
 .postcard__taxo-label {
   display: inline-block;
-}
-
-/* line 84, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo-label {
   padding: 0 1em;
   line-height: 3;
   -webkit-transform: translate(0, -80%);
@@ -1065,18 +1266,19 @@ hr {
   -webkit-backface-visibility: hidden;
 }
 
-/* line 92, ../../../sass/project/modules/_postcard.scss */
+/* line 89, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link {
+  display: block;
   border-radius: 0;
   color: white;
   border-top: 4px solid;
   overflow: hidden;
 }
-/* line 98, ../../../sass/project/modules/_postcard.scss */
+/* line 96, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link:hover, .postcard__taxo-link:focus {
   color: white;
 }
-/* line 100, ../../../sass/project/modules/_postcard.scss */
+/* line 98, ../../../sass/project/modules/_postcard.scss */
 .postcard__taxo-link:hover .postcard__taxo-label, .postcard__taxo-link:focus .postcard__taxo-label {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
@@ -1085,80 +1287,80 @@ hr {
   transform: translate(0, 0);
 }
 
-/* line 63, ../../../sass/project/modules/_postcard.scss */
+/* line 65, ../../../sass/project/modules/_postcard.scss */
 .postcard--design .postcard__taxo-label {
   background: #349e63;
 }
-/* line 67, ../../../sass/project/modules/_postcard.scss */
+/* line 69, ../../../sass/project/modules/_postcard.scss */
 .postcard--design .postcard__taxo-link {
   border-color: seagreen;
 }
-/* line 120, ../../../sass/project/modules/_postcard.scss */
+/* line 118, ../../../sass/project/modules/_postcard.scss */
 .postcard--design .postcard__media {
   border-color: seagreen;
 }
 
-/* line 63, ../../../sass/project/modules/_postcard.scss */
+/* line 65, ../../../sass/project/modules/_postcard.scss */
 .postcard--frontend .postcard__taxo-label {
   background: #2d8dbf;
 }
-/* line 67, ../../../sass/project/modules/_postcard.scss */
+/* line 69, ../../../sass/project/modules/_postcard.scss */
 .postcard--frontend .postcard__taxo-link {
   border-color: #287eaa;
 }
-/* line 120, ../../../sass/project/modules/_postcard.scss */
+/* line 118, ../../../sass/project/modules/_postcard.scss */
 .postcard--frontend .postcard__media {
   border-color: #287eaa;
 }
 
-/* line 63, ../../../sass/project/modules/_postcard.scss */
+/* line 65, ../../../sass/project/modules/_postcard.scss */
 .postcard--backend .postcard__taxo-label {
   background: #895ba4;
 }
-/* line 67, ../../../sass/project/modules/_postcard.scss */
+/* line 69, ../../../sass/project/modules/_postcard.scss */
 .postcard--backend .postcard__taxo-link {
   border-color: #7b5294;
 }
-/* line 120, ../../../sass/project/modules/_postcard.scss */
+/* line 118, ../../../sass/project/modules/_postcard.scss */
 .postcard--backend .postcard__media {
   border-color: #7b5294;
 }
 
-/* line 63, ../../../sass/project/modules/_postcard.scss */
+/* line 65, ../../../sass/project/modules/_postcard.scss */
 .postcard--content .postcard__taxo-label {
   background: gray;
 }
-/* line 67, ../../../sass/project/modules/_postcard.scss */
+/* line 69, ../../../sass/project/modules/_postcard.scss */
 .postcard--content .postcard__taxo-link {
   border-color: #737373;
 }
-/* line 120, ../../../sass/project/modules/_postcard.scss */
+/* line 118, ../../../sass/project/modules/_postcard.scss */
 .postcard--content .postcard__media {
   border-color: #737373;
 }
 
-/* line 63, ../../../sass/project/modules/_postcard.scss */
+/* line 65, ../../../sass/project/modules/_postcard.scss */
 .postcard--tools .postcard__taxo-label {
   background: #3d566e;
 }
-/* line 67, ../../../sass/project/modules/_postcard.scss */
+/* line 69, ../../../sass/project/modules/_postcard.scss */
 .postcard--tools .postcard__taxo-link {
   border-color: #34495e;
 }
-/* line 120, ../../../sass/project/modules/_postcard.scss */
+/* line 118, ../../../sass/project/modules/_postcard.scss */
 .postcard--tools .postcard__media {
   border-color: #34495e;
 }
 
-/* line 63, ../../../sass/project/modules/_postcard.scss */
+/* line 65, ../../../sass/project/modules/_postcard.scss */
 .postcard--business .postcard__taxo-label {
   background: #d85a4b;
 }
-/* line 67, ../../../sass/project/modules/_postcard.scss */
+/* line 69, ../../../sass/project/modules/_postcard.scss */
 .postcard--business .postcard__taxo-link {
   border-color: #d44736;
 }
-/* line 120, ../../../sass/project/modules/_postcard.scss */
+/* line 118, ../../../sass/project/modules/_postcard.scss */
 .postcard--business .postcard__media {
   border-color: #d44736;
 }
@@ -1200,6 +1402,29 @@ hr {
   overflow: hidden;
   display: block;
   height: 0;
+}
+
+/* line 1, ../../../sass/project/modules/_icons.scss */
+.fa--square {
+  width: 1.5em;
+  text-align: center;
+}
+
+/* line 6, ../../../sass/project/modules/_widget.scss */
+.widget__title {
+  margin: 0;
+  line-height: 2;
+}
+
+/* line 12, ../../../sass/project/modules/_widget.scss */
+.widget__head {
+  border-bottom: 1px solid #eaeaea;
+}
+
+/* line 20, ../../../sass/project/modules/_widget.scss */
+.widget__foot {
+  border-top: 1px solid #e0e0e0;
+  background: #f6f6f6;
 }
 
 /* line 4, ../../../sass/project/blocks/_header.scss */
@@ -1293,13 +1518,16 @@ hr {
   background: #eaeaea;
 }
 
-/* line 6, ../../../sass/project/blocks/_featured.scss */
-.section--featured {
-  background: white;
-  box-shadow: #ccd0d2 0 0 1px 0;
-}
-
-/* line 17, ../../../sass/project/blocks/_featured.scss */
+/* line 16, ../../../sass/project/blocks/_featured.scss */
 .featured--first {
   border-bottom: 1px solid #e0e0e0;
+}
+
+/* line 7, ../../../sass/project/blocks/_widgets.scss */
+.nav--social {
+  text-align: center;
+}
+/* line 11, ../../../sass/project/blocks/_widgets.scss */
+.nav--social > li > a {
+  line-height: 3;
 }

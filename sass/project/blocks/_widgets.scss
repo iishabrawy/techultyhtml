@@ -1,0 +1,20 @@
+.column--widgets {
+  // @extend %GColumn--oppos;
+  @extend %u-paddingHS;
+  @extend %u-span3;
+}
+
+.nav--social {
+  text-align: center;
+  > li {
+    @extend %u-span1of4;
+    > a {
+      @extend %H--h5;
+      line-height: 3;
+    }
+  }
+}
+
+.widget {
+
+}
