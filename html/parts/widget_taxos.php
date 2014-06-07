@@ -1,16 +1,16 @@
-<aside class="widget widget--taxos">
+<aside class="widget widget--taxos card">
   <header class="widget__head">
-    <h3 class="widget__title"><i class="fa fa-puzzle-piece"></i> حسب الموضوعات</h3>
+    <h3 class="widget__title">تصفح حسب الموضوعات</h3>
   </header>
 
   <div class="widget__body">
     <ul class="menu menu--taxos menu--medium">
-      <li class="menu__item"><a class="button--taxo-design" href="#"><i class="fa fa--square fa-crop"></i> التصميم والجماليات</a></li>
-      <li class="menu__item"><a class="button--taxo-frontend" href="#"><i class="fa fa--square fa-code"></i> تكويد الواجهة</a></li>
-      <li class="menu__item"><a class="button--taxo-backend" href="#"><i class="fa fa--square fa-code-fork"></i> تطوير البنية</a></li>
-      <li class="menu__item"><a class="button--taxo-content" href="#"><i class="fa fa--square fa-align-right"></i> الكتابة والمحتوى</a></li>
-      <li class="menu__item"><a class="button--taxo-tools" href="#"><i class="fa fa--square fa-wrench"></i> أدوات ومكتبات</a></li>
-      <li class="menu__item"><a class="button--taxo-business" href="#"><i class="fa fa--square fa-suitcase"></i> الريادة والتسويق</a></li>
+      <li class="menu__item"><a class="coolink coolink--design" href="#"><i class="fa fa-crop i i--ccl"></i> التصميم والجماليات</a></li>
+      <li class="menu__item"><a class="coolink coolink--frontend" href="#"><i class="fa fa-code i i--ccl"></i> تكويد الواجهة</a></li>
+      <li class="menu__item"><a class="coolink coolink--backend" href="#"><i class="fa fa-code-fork i i--ccl"></i> تطوير البنية</a></li>
+      <li class="menu__item"><a class="coolink coolink--content" href="#"><i class="fa fa-align-right i i--ccl"></i> الكتابة والمحتوى</a></li>
+      <li class="menu__item"><a class="coolink coolink--tools" href="#"><i class="fa fa-puzzle-piece i i--ccl"></i> أدوات ومكتبات</a></li>
+      <li class="menu__item"><a class="coolink coolink--business" href="#"><i class="fa fa-suitcase i i--ccl"></i> الريادة والتسويق</a></li>
     </ul>
   </div>
 </aside>

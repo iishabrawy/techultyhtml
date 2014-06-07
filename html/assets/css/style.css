@@ -589,7 +589,7 @@ blockquote p:last-of-type {
 }
 
 /* line 126, ../../../../univercss/Utilities/Rhythm/_mixins.scss */
-.nav--social > li, .column--widgets {
+.column--widgets {
   width: 25%;
 }
 
@@ -599,7 +599,7 @@ blockquote p:last-of-type {
 }
 
 /* line 126, ../../../../univercss/Utilities/Rhythm/_mixins.scss */
-.featured, .featured--first .postcard__main {
+.nav--social li, .postcard--primary .postcard__main, .featured .postcard {
   width: 33.3333333%;
 }
 
@@ -609,7 +609,7 @@ blockquote p:last-of-type {
 }
 
 /* line 126, ../../../../univercss/Utilities/Rhythm/_mixins.scss */
-.featured--first .postcard__cover {
+.postcard--primary .postcard__cover {
   width: 66.6666667%;
 }
 
@@ -619,7 +619,7 @@ blockquote p:last-of-type {
 }
 
 /* line 126, ../../../../univercss/Utilities/Rhythm/_mixins.scss */
-.postcard--primary, .column--nav-main, .search__input {
+.postcard--landscape, .column--nav-main, .search__input {
   width: 100%;
 }
 
@@ -646,12 +646,12 @@ blockquote {
 }
 
 /* line 120, ../../../../univercss/Utilities/Spaces/_mixins.scss */
-.section--featured {
+.zone--featured {
   margin-bottom: 28px ;
 }
 
 /* line 120, ../../../../univercss/Utilities/Spaces/_mixins.scss */
-blockquote, .widget__copy, .widget__foot, .nav--main .search {
+.island, blockquote, .widget__copy, .widget__foot, .nav--main .search {
   padding: 14px ;
 }
 
@@ -668,16 +668,16 @@ blockquote, .widget__copy, .widget__foot, .nav--main .search {
 }
 
 /* line 69, ../../../../univercss/Utilities/Flow/_mixins.scss */
-.zone, .postcard--primary .postcard__inner, .nav {
+.zone, .postcard--landscape .postcard__inner, .nav {
   *zoom: 1;
 }
 /* line 5, ../../../../univercss/Utilities/Flow/_mixins.scss */
-.zone:before, .postcard--primary .postcard__inner:before, .nav:before, .zone:after, .postcard--primary .postcard__inner:after, .nav:after {
+.zone:before, .postcard--landscape .postcard__inner:before, .nav:before, .zone:after, .postcard--landscape .postcard__inner:after, .nav:after {
   content: " ";
   display: table;
 }
 /* line 9, ../../../../univercss/Utilities/Flow/_mixins.scss */
-.zone:after, .postcard--primary .postcard__inner:after, .nav:after {
+.zone:after, .postcard--landscape .postcard__inner:after, .nav:after {
   clear: both;
 }
 
@@ -777,7 +777,7 @@ blockquote, .widget__copy, .widget__foot, .nav--main .search {
 }
 
 /* line 172, ../../../../univercss/Modules/Grid/_mixins.scss */
-.cell, .featured {
+.cell, .featured .postcard {
   position: relative;
   vertical-align: top;
   display: inline-block;
@@ -789,14 +789,14 @@ blockquote, .widget__copy, .widget__foot, .nav--main .search {
 }
 
 /* line 180, ../../../../univercss/Modules/Grid/_mixins.scss */
-.column, .postcard--primary .postcard__cover,
-.postcard--primary .postcard__main {
+.column, .postcard--landscape .postcard__cover,
+.postcard--landscape .postcard__main {
   position: relative;
   float: right;
 }
 
 /* line 189, ../../../../univercss/Modules/Grid/_mixins.scss */
-.column--oppos, .column--siteinfo, .featured--first .postcard__cover {
+.column--oppos, .postcard--primary .postcard__cover, .column--siteinfo {
   float: left;
 }
 
@@ -847,10 +847,24 @@ blockquote, .widget__copy, .widget__foot, .nav--main .search {
 }
 
 /* line 36, ../../../../univercss/Modules/Heading/_mixins.scss */
-.nav--medium, .menu--medium, .widget__title, .nav--social > li > a {
+.nav--social {
+  font-size: 24px;
+  font-size: 1.7142857rem;
+  line-height: 1.75;
+}
+
+/* line 36, ../../../../univercss/Modules/Heading/_mixins.scss */
+.nav--medium, .menu--medium {
   font-size: 20px;
   font-size: 1.4285714rem;
   line-height: 1.05;
+}
+
+/* line 36, ../../../../univercss/Modules/Heading/_mixins.scss */
+.widget__title {
+  font-size: 18px;
+  font-size: 1.2857143rem;
+  line-height: 1.1666667;
 }
 
 /* line 1, ../../../sass/project/_base.scss */
@@ -887,10 +901,10 @@ a {
   -moz-transition-property: background, color, border, opacity;
   -o-transition-property: background, color, border, opacity;
   transition-property: background, color, border, opacity;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 /* line 25, ../../../sass/project/_base.scss */
 a:hover, a:focus {
@@ -953,22 +967,28 @@ hr {
   padding: .5em 1em;
 }
 
-/* line 43, ../../../sass/project/modules/_navigation.scss */
+/* line 44, ../../../sass/project/modules/_navigation.scss */
 .menu--medium li > a {
   padding: .5em;
 }
 
-/* line 71, ../../../sass/project/modules/_navigation.scss */
+/* line 72, ../../../sass/project/modules/_navigation.scss */
 .nav--muted {
   color: darkgrey;
 }
-/* line 73, ../../../sass/project/modules/_navigation.scss */
+/* line 74, ../../../sass/project/modules/_navigation.scss */
 .nav--muted a {
   color: darkgrey;
 }
-/* line 76, ../../../sass/project/modules/_navigation.scss */
+/* line 77, ../../../sass/project/modules/_navigation.scss */
 .nav--muted a:hover, .nav--muted a:focus {
   color: #575858;
+}
+
+/* line 86, ../../../sass/project/modules/_navigation.scss */
+.nav--social {
+  text-align: center;
+  line-height: 2;
 }
 
 /* line 1, ../../../sass/project/modules/_buttons.scss */
@@ -976,13 +996,13 @@ hr {
   border-radius: 4px;
 }
 
-/* line 8, ../../../sass/project/modules/_buttons.scss */
+/* line 7, ../../../sass/project/modules/_buttons.scss */
 .button--large {
   font-size: 16.8px;
   font-size: 1.2rem;
 }
 
-/* line 21, ../../../sass/project/modules/_buttons.scss */
+/* line 20, ../../../sass/project/modules/_buttons.scss */
 .button--wire {
   border: 2px solid;
 }
@@ -1010,243 +1030,23 @@ hr {
 }
 
 /* line 44, ../../../sass/project/modules/_buttons.scss */
+.button--rev {
+  color: white;
+  background: #34495e;
+}
+/* line 48, ../../../sass/project/modules/_buttons.scss */
+.button--rev:hover, .button--rev:focus {
+  color: white;
+  background: #d44736;
+}
+
+/* line 54, ../../../sass/project/modules/_buttons.scss */
 .button--secondary {
   background: #eaeaea;
 }
 
-/* line 57, ../../../sass/project/modules/_buttons.scss */
-.button--level-bgn {
-  color: #287eaa;
-}
-/* line 60, ../../../sass/project/modules/_buttons.scss */
-.button--level-bgn:hover, .button--level-bgn:focus {
-  color: #21698d;
-}
-
-/* line 64, ../../../sass/project/modules/_buttons.scss */
-.button--level-bgn-rev {
-  color: white;
-  background: #287eaa;
-}
-/* line 68, ../../../sass/project/modules/_buttons.scss */
-.button--level-bgn-rev:hover, .button--level-bgn-rev:focus {
-  color: white;
-  background: #21698d;
-}
-
-/* line 57, ../../../sass/project/modules/_buttons.scss */
-.button--level-int {
-  color: #4eba6f;
-}
-/* line 60, ../../../sass/project/modules/_buttons.scss */
-.button--level-int:hover, .button--level-int:focus {
-  color: #40a45f;
-}
-
-/* line 64, ../../../sass/project/modules/_buttons.scss */
-.button--level-int-rev {
-  color: white;
-  background: #4eba6f;
-}
-/* line 68, ../../../sass/project/modules/_buttons.scss */
-.button--level-int-rev:hover, .button--level-int-rev:focus {
-  color: white;
-  background: #40a45f;
-}
-
-/* line 57, ../../../sass/project/modules/_buttons.scss */
-.button--level-adv {
-  color: #da2e75;
-}
-/* line 60, ../../../sass/project/modules/_buttons.scss */
-.button--level-adv:hover, .button--level-adv:focus {
-  color: #c22264;
-}
-
-/* line 64, ../../../sass/project/modules/_buttons.scss */
-.button--level-adv-rev {
-  color: white;
-  background: #da2e75;
-}
-/* line 68, ../../../sass/project/modules/_buttons.scss */
-.button--level-adv-rev:hover, .button--level-adv-rev:focus {
-  color: white;
-  background: #c22264;
-}
-
-/* line 87, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-design {
-  color: seagreen;
-}
-/* line 90, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-design:hover, .button--taxo-design:focus {
-  color: #257046;
-}
-
-/* line 94, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-design-rev {
-  color: white;
-  background: seagreen;
-}
-/* line 98, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-design-rev:hover, .button--taxo-design-rev:focus {
-  color: white;
-  background: #257046;
-}
-
-/* line 87, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-frontend {
-  color: #287eaa;
-}
-/* line 90, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-frontend:hover, .button--taxo-frontend:focus {
-  color: #21698d;
-}
-
-/* line 94, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-frontend-rev {
-  color: white;
-  background: #287eaa;
-}
-/* line 98, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-frontend-rev:hover, .button--taxo-frontend-rev:focus {
-  color: white;
-  background: #21698d;
-}
-
-/* line 87, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-backend {
-  color: #7b5294;
-}
-/* line 90, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-backend:hover, .button--taxo-backend:focus {
-  color: #68457d;
-}
-
-/* line 94, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-backend-rev {
-  color: white;
-  background: #7b5294;
-}
-/* line 98, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-backend-rev:hover, .button--taxo-backend-rev:focus {
-  color: white;
-  background: #68457d;
-}
-
-/* line 87, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-content {
-  color: #737373;
-}
-/* line 90, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-content:hover, .button--taxo-content:focus {
-  color: #616161;
-}
-
-/* line 94, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-content-rev {
-  color: white;
-  background: #737373;
-}
-/* line 98, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-content-rev:hover, .button--taxo-content-rev:focus {
-  color: white;
-  background: #616161;
-}
-
-/* line 87, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-tools {
-  color: #34495e;
-}
-/* line 90, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-tools:hover, .button--taxo-tools:focus {
-  color: #273747;
-}
-
-/* line 94, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-tools-rev {
-  color: white;
-  background: #34495e;
-}
-/* line 98, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-tools-rev:hover, .button--taxo-tools-rev:focus {
-  color: white;
-  background: #273747;
-}
-
-/* line 87, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-business {
-  color: #d44736;
-}
-/* line 90, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-business:hover, .button--taxo-business:focus {
-  color: #be3929;
-}
-
-/* line 94, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-business-rev {
-  color: white;
-  background: #d44736;
-}
-/* line 98, ../../../sass/project/modules/_buttons.scss */
-.button--taxo-business-rev:hover, .button--taxo-business-rev:focus {
-  color: white;
-  background: #be3929;
-}
-
-/* line 1, ../../../sass/project/modules/_whitecard.scss */
-.whitecard, .widget, .section--featured {
-  background: white;
-  box-shadow: #ccd0d2 0 0 1px 0;
-  border-radius: 2px;
-}
-
-/* line 15, ../../../sass/project/modules/_postcard.scss */
-.postcard__title {
-  font-size: 14px;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* line 25, ../../../sass/project/modules/_postcard.scss */
-.postcard__media {
-  -webkit-transform: translateZ(0);
-  background: #e0e0e0;
-  box-shadow: #bababa 0 0 1px 0;
-  border-top: 4px solid;
-}
-/* line 32, ../../../sass/project/modules/_postcard.scss */
-.postcard__media img {
-  height: auto;
-}
-/* line 37, ../../../sass/project/modules/_postcard.scss */
-.postcard__media:hover img, .postcard__media:focus img {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
-  opacity: 0.8;
-}
-
-/* line 51, ../../../sass/project/modules/_postcard.scss */
-.postcard--primary .postcard__cover,
-.postcard--primary .postcard__main {
-  position: static;
-}
-/* line 56, ../../../sass/project/modules/_postcard.scss */
-.postcard--primary .postcard__title {
-  font-size: 21px;
-  font-size: 1.5rem;
-  line-height: 1.6;
-}
-
-/* line 74, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo {
-  position: absolute;
-  top: 14px;
-  left: 28px;
-}
-
-/* line 80, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo-label {
+/* line 10, ../../../sass/project/modules/_ribbon.scss */
+.ribbon__label {
   display: inline-block;
   padding: 0 1em;
   line-height: 3;
@@ -1266,20 +1066,20 @@ hr {
   -webkit-backface-visibility: hidden;
 }
 
-/* line 89, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo-link {
+/* line 19, ../../../sass/project/modules/_ribbon.scss */
+.ribbon {
   display: block;
   border-radius: 0;
   color: white;
   border-top: 4px solid;
   overflow: hidden;
 }
-/* line 96, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo-link:hover, .postcard__taxo-link:focus {
+/* line 26, ../../../sass/project/modules/_ribbon.scss */
+.ribbon:hover, .ribbon:focus {
   color: white;
 }
-/* line 98, ../../../sass/project/modules/_postcard.scss */
-.postcard__taxo-link:hover .postcard__taxo-label, .postcard__taxo-link:focus .postcard__taxo-label {
+/* line 28, ../../../sass/project/modules/_ribbon.scss */
+.ribbon:hover .ribbon__label, .ribbon:focus .ribbon__label {
   -webkit-transform: translate(0, 0);
   -moz-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -1287,115 +1087,196 @@ hr {
   transform: translate(0, 0);
 }
 
-/* line 65, ../../../sass/project/modules/_postcard.scss */
-.postcard--design .postcard__taxo-label {
-  background: #349e63;
+/* line 1, ../../../sass/project/modules/_card.scss */
+.card {
+  box-shadow: #ccd0d2 0 0 1px 0;
+  border-radius: 2px;
+  background: white;
 }
-/* line 69, ../../../sass/project/modules/_postcard.scss */
-.postcard--design .postcard__taxo-link {
+
+/* line 9, ../../../sass/project/modules/_card.scss */
+.card--primary,
+.card--rev,
+.card--primary-alt {
+  color: white;
+}
+/* line 11, ../../../sass/project/modules/_card.scss */
+.card--primary a,
+.card--rev a,
+.card--primary-alt a {
+  color: white;
+}
+/* line 14, ../../../sass/project/modules/_card.scss */
+.card--primary a:hover, .card--primary a:focus,
+.card--rev a:hover,
+.card--rev a:focus,
+.card--primary-alt a:hover,
+.card--primary-alt a:focus {
+  color: #34495e;
+}
+
+/* line 20, ../../../sass/project/modules/_card.scss */
+.card--rev {
+  background: #34495e;
+}
+/* line 24, ../../../sass/project/modules/_card.scss */
+.card--rev a:hover, .card--rev a:focus {
+  color: #f25749;
+}
+
+/* line 30, ../../../sass/project/modules/_card.scss */
+.card--primary-alt {
+  background: #d44736;
+}
+
+/* line 40, ../../../sass/project/modules/_card.scss */
+.card--primary {
+  background: #4167b1;
+}
+
+/* line 1, ../../../sass/project/modules/_postcard.scss */
+.postcard {
+  position: relative;
+}
+
+/* line 15, ../../../sass/project/modules/_postcard.scss */
+.postcard__title {
+  font-size: 14px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* line 25, ../../../sass/project/modules/_postcard.scss */
+.postcard__media {
+  -webkit-transform: translateZ(0);
+  background: #e0e0e0;
+  box-shadow: #bababa 0 0 1px 0;
+  border-top: 4px solid;
+}
+/* line 33, ../../../sass/project/modules/_postcard.scss */
+.postcard__media img {
+  width: 100%;
+  height: auto;
+}
+/* line 40, ../../../sass/project/modules/_postcard.scss */
+.postcard__media:hover img, .postcard__media:focus img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 54, ../../../sass/project/modules/_postcard.scss */
+.postcard--landscape .postcard__cover,
+.postcard--landscape .postcard__main {
+  position: static;
+}
+/* line 59, ../../../sass/project/modules/_postcard.scss */
+.postcard--landscape .postcard__title {
+  font-size: 21px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* line 79, ../../../sass/project/modules/_postcard.scss */
+.postcard__taxo {
+  position: absolute;
+  top: 14px;
+  left: 28px;
+}
+
+/* line 2, ../../../sass/project/modules/_ribbon.scss */
+.postcard--design .ribbon {
   border-color: seagreen;
 }
-/* line 118, ../../../sass/project/modules/_postcard.scss */
+/* line 5, ../../../sass/project/modules/_ribbon.scss */
+.postcard--design .ribbon__label {
+  background: #349e63;
+}
+/* line 94, ../../../sass/project/modules/_postcard.scss */
 .postcard--design .postcard__media {
   border-color: seagreen;
 }
 
-/* line 65, ../../../sass/project/modules/_postcard.scss */
-.postcard--frontend .postcard__taxo-label {
-  background: #2d8dbf;
-}
-/* line 69, ../../../sass/project/modules/_postcard.scss */
-.postcard--frontend .postcard__taxo-link {
+/* line 2, ../../../sass/project/modules/_ribbon.scss */
+.postcard--frontend .ribbon {
   border-color: #287eaa;
 }
-/* line 118, ../../../sass/project/modules/_postcard.scss */
+/* line 5, ../../../sass/project/modules/_ribbon.scss */
+.postcard--frontend .ribbon__label {
+  background: #2d8dbf;
+}
+/* line 94, ../../../sass/project/modules/_postcard.scss */
 .postcard--frontend .postcard__media {
   border-color: #287eaa;
 }
 
-/* line 65, ../../../sass/project/modules/_postcard.scss */
-.postcard--backend .postcard__taxo-label {
-  background: #895ba4;
-}
-/* line 69, ../../../sass/project/modules/_postcard.scss */
-.postcard--backend .postcard__taxo-link {
+/* line 2, ../../../sass/project/modules/_ribbon.scss */
+.postcard--backend .ribbon {
   border-color: #7b5294;
 }
-/* line 118, ../../../sass/project/modules/_postcard.scss */
+/* line 5, ../../../sass/project/modules/_ribbon.scss */
+.postcard--backend .ribbon__label {
+  background: #895ba4;
+}
+/* line 94, ../../../sass/project/modules/_postcard.scss */
 .postcard--backend .postcard__media {
   border-color: #7b5294;
 }
 
-/* line 65, ../../../sass/project/modules/_postcard.scss */
-.postcard--content .postcard__taxo-label {
-  background: gray;
-}
-/* line 69, ../../../sass/project/modules/_postcard.scss */
-.postcard--content .postcard__taxo-link {
+/* line 2, ../../../sass/project/modules/_ribbon.scss */
+.postcard--content .ribbon {
   border-color: #737373;
 }
-/* line 118, ../../../sass/project/modules/_postcard.scss */
+/* line 5, ../../../sass/project/modules/_ribbon.scss */
+.postcard--content .ribbon__label {
+  background: gray;
+}
+/* line 94, ../../../sass/project/modules/_postcard.scss */
 .postcard--content .postcard__media {
   border-color: #737373;
 }
 
-/* line 65, ../../../sass/project/modules/_postcard.scss */
-.postcard--tools .postcard__taxo-label {
-  background: #3d566e;
-}
-/* line 69, ../../../sass/project/modules/_postcard.scss */
-.postcard--tools .postcard__taxo-link {
+/* line 2, ../../../sass/project/modules/_ribbon.scss */
+.postcard--tools .ribbon {
   border-color: #34495e;
 }
-/* line 118, ../../../sass/project/modules/_postcard.scss */
+/* line 5, ../../../sass/project/modules/_ribbon.scss */
+.postcard--tools .ribbon__label {
+  background: #3d566e;
+}
+/* line 94, ../../../sass/project/modules/_postcard.scss */
 .postcard--tools .postcard__media {
   border-color: #34495e;
 }
 
-/* line 65, ../../../sass/project/modules/_postcard.scss */
-.postcard--business .postcard__taxo-label {
-  background: #d85a4b;
-}
-/* line 69, ../../../sass/project/modules/_postcard.scss */
-.postcard--business .postcard__taxo-link {
+/* line 2, ../../../sass/project/modules/_ribbon.scss */
+.postcard--business .ribbon {
   border-color: #d44736;
 }
-/* line 118, ../../../sass/project/modules/_postcard.scss */
+/* line 5, ../../../sass/project/modules/_ribbon.scss */
+.postcard--business .ribbon__label {
+  background: #d85a4b;
+}
+/* line 94, ../../../sass/project/modules/_postcard.scss */
 .postcard--business .postcard__media {
   border-color: #d44736;
 }
 
 /* line 16, ../../../sass/project/modules/_respomedia.scss */
-.respomedia__peice, .respomedia > img, .postcard__media > img,
-.respomedia > object,
-.postcard__media > object,
-.respomedia > embed,
-.postcard__media > embed,
-.respomedia > iframe,
-.postcard__media > iframe,
-.respomedia > video,
-.postcard__media > video {
+.respomedia__peice {
   position: absolute;
   top: 0;
   left: 0;
 }
 
 /* line 22, ../../../sass/project/modules/_respomedia.scss */
-.respomedia__peice--stretch, .respomedia > img, .postcard__media > img,
-.respomedia > object,
-.postcard__media > object,
-.respomedia > embed,
-.postcard__media > embed,
-.respomedia > iframe,
-.postcard__media > iframe,
-.respomedia > video,
-.postcard__media > video {
+.respomedia__peice--stretch {
   width: 100%;
   height: 100%;
 }
 
 /* line 26, ../../../sass/project/modules/_respomedia.scss */
-.respomedia, .postcard__media {
+.respomedia {
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
@@ -1404,27 +1285,126 @@ hr {
   height: 0;
 }
 
-/* line 1, ../../../sass/project/modules/_icons.scss */
-.fa--square {
+/* line 2, ../../../sass/project/modules/_icons.scss */
+.i--ccl,
+.i--sqr {
   width: 1.5em;
   text-align: center;
 }
 
-/* line 6, ../../../sass/project/modules/_widget.scss */
-.widget__title {
-  margin: 0;
+/* line 7, ../../../sass/project/modules/_icons.scss */
+.i--ccl {
+  font-size: .8em;
+  width: 2em;
+  height: 2em;
   line-height: 2;
+  border-radius: 2em;
+}
+
+/* line 2, ../../../sass/project/modules/_coolink.scss */
+.coolink .i {
+  color: white;
+}
+/* line 6, ../../../sass/project/modules/_coolink.scss */
+.coolink:hover, .coolink:focus {
+  color: #404040;
+}
+/* line 8, ../../../sass/project/modules/_coolink.scss */
+.coolink:hover .i, .coolink:focus .i {
+  background: #404040;
+}
+
+/* line 19, ../../../sass/project/modules/_coolink.scss */
+.coolink--design {
+  color: seagreen;
+}
+/* line 21, ../../../sass/project/modules/_coolink.scss */
+.coolink--design .i {
+  background: seagreen;
+}
+
+/* line 19, ../../../sass/project/modules/_coolink.scss */
+.coolink--frontend {
+  color: #287eaa;
+}
+/* line 21, ../../../sass/project/modules/_coolink.scss */
+.coolink--frontend .i {
+  background: #287eaa;
+}
+
+/* line 19, ../../../sass/project/modules/_coolink.scss */
+.coolink--backend {
+  color: #7b5294;
+}
+/* line 21, ../../../sass/project/modules/_coolink.scss */
+.coolink--backend .i {
+  background: #7b5294;
+}
+
+/* line 19, ../../../sass/project/modules/_coolink.scss */
+.coolink--content {
+  color: #737373;
+}
+/* line 21, ../../../sass/project/modules/_coolink.scss */
+.coolink--content .i {
+  background: #737373;
+}
+
+/* line 19, ../../../sass/project/modules/_coolink.scss */
+.coolink--tools {
+  color: #34495e;
+}
+/* line 21, ../../../sass/project/modules/_coolink.scss */
+.coolink--tools .i {
+  background: #34495e;
+}
+
+/* line 19, ../../../sass/project/modules/_coolink.scss */
+.coolink--business {
+  color: #d44736;
+}
+/* line 21, ../../../sass/project/modules/_coolink.scss */
+.coolink--business .i {
+  background: #d44736;
+}
+
+/* line 31, ../../../sass/project/modules/_coolink.scss */
+.coolink--bgn {
+  color: #287eaa;
+}
+/* line 33, ../../../sass/project/modules/_coolink.scss */
+.coolink--bgn .i {
+  background: #287eaa;
+}
+
+/* line 31, ../../../sass/project/modules/_coolink.scss */
+.coolink--int {
+  color: #4eba6f;
+}
+/* line 33, ../../../sass/project/modules/_coolink.scss */
+.coolink--int .i {
+  background: #4eba6f;
+}
+
+/* line 31, ../../../sass/project/modules/_coolink.scss */
+.coolink--adv {
+  color: #da2e75;
+}
+/* line 33, ../../../sass/project/modules/_coolink.scss */
+.coolink--adv .i {
+  background: #da2e75;
+}
+
+/* line 5, ../../../sass/project/modules/_widget.scss */
+.widget__title {
+  line-height: 2.4;
+  font-weight: 400;
+  margin: 0;
 }
 
 /* line 12, ../../../sass/project/modules/_widget.scss */
 .widget__head {
   border-bottom: 1px solid #eaeaea;
-}
-
-/* line 20, ../../../sass/project/modules/_widget.scss */
-.widget__foot {
-  border-top: 1px solid #e0e0e0;
-  background: #f6f6f6;
 }
 
 /* line 4, ../../../sass/project/blocks/_header.scss */
@@ -1516,18 +1496,4 @@ hr {
 /* line 1, ../../../sass/project/blocks/_main.scss */
 .main {
   background: #eaeaea;
-}
-
-/* line 16, ../../../sass/project/blocks/_featured.scss */
-.featured--first {
-  border-bottom: 1px solid #e0e0e0;
-}
-
-/* line 7, ../../../sass/project/blocks/_widgets.scss */
-.nav--social {
-  text-align: center;
-}
-/* line 11, ../../../sass/project/blocks/_widgets.scss */
-.nav--social > li > a {
-  line-height: 3;
 }

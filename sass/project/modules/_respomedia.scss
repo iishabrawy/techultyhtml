@@ -25,12 +25,4 @@
 }
 .respomedia {
   @include aspect-ratio-box(16,9);
-  > img,
-  > object,
-  > embed,
-  > iframe,
-  > video {
-    @extend .respomedia__peice;
-    @extend .respomedia__peice--stretch;
-  }
 }

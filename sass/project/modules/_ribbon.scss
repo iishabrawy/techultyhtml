@@ -1,0 +1,33 @@
+@mixin ribbonColor ($color) {
+  .ribbon {
+    border-color: $color;
+  }
+  .ribbon__label {
+    background: lighten($color,5%);
+  }
+}
+
+.ribbon__label {
+  display: inline-block;
+  @include u-inlineBlockSize(1);
+  @include translate(0,-80%);
+  @include transition-property(transform);
+  @include transition-duration(0.3s);
+  -webkit-backface-visibility: hidden;
+}
+
+.ribbon {
+  display: block;
+  border-radius: 0;
+  color: white;
+  border-top: 4px solid;
+
+  &:hover,
+  &:focus {
+    color: white;
+    .ribbon__label {
+      @include translate(0,0);
+    }
+  }
+  overflow: hidden;
+}

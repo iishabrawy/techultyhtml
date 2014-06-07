@@ -1,0 +1,37 @@
+.coolink {
+  .i {
+    color: white;
+  }
+  &:hover,
+  &:focus {
+    color: $prj-color--gray-darker;
+    .i {
+      background: $prj-color--gray-darker;
+    }
+  }
+}
+
+
+$taxos: techultyTaxos();
+@each $taxo in $taxos {
+  $name: nth($taxo, 1);
+  $color: nth($taxo, 2);
+  .coolink--#{$name} {
+    color: $color;
+    .i {
+      background: $color;
+    }
+  }
+}
+
+$levels: techultyLevels();
+@each $level in $levels {
+  $name: nth($level, 1);
+  $color: nth($level, 2);
+  .coolink--#{$name} {
+    color: $color;
+    .i {
+      background: $color;
+    }
+  }
+}

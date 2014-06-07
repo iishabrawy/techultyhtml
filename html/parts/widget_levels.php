@@ -1,13 +1,13 @@
-<aside class="widget widget--levels">
+<aside class="widget widget--levels card">
   <header class="widget__head">
-    <h3 class="widget__title"><i class="fa fa-dashboard"></i> حسب المستويات</h3>
+    <h3 class="widget__title">تصفح حسب المستويات</h3>
   </header>
 
   <div class="widget__body">
     <ul class="menu menu--levels menu--medium">
-      <li class="menu__item"><a class="button--level-bgn" href="#"><i class="fa fa--square fa-star-o"></i> مبتدئ</a></li>
-      <li class="menu__item"><a class="button--level-int" href="#"><i class="fa fa--square fa-star-half-o"></i> متوسط</a></li>
-      <li class="menu__item"><a class="button--level-adv" href="#"><i class="fa fa--square fa-star"></i> متقدم</a></li>
+      <li class="menu__item"><a class="coolink coolink--bgn" href="#"><i class="i i--ccl fa fa-star-o"></i> مبتدئ</a></li>
+      <li class="menu__item"><a class="coolink coolink--int" href="#"><i class="i i--ccl fa fa-star-half-o"></i> متوسط</a></li>
+      <li class="menu__item"><a class="coolink coolink--adv" href="#"><i class="i i--ccl fa fa-star"></i> متقدم</a></li>
     </ul>
   </div>
 </aside>

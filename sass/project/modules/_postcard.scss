@@ -1,5 +1,5 @@
 .postcard {
-
+  position: relative;
 }
 
 .postcard__cover{
@@ -23,15 +23,18 @@
 }
 
 .postcard__media {
-  @extend .respomedia;
-  // webkit translatZ(0) fixes "shaky images durring css transition" bug on webkit browsers
+  // webkit translatZ(0) fixes "shaky images durring
+  // css transition" bug on webkit browsers
   -webkit-transform: translateZ(0);
   background: $prj-color--gray-silver;
   box-shadow: $prj-color--gray-medium 0 0 1px 0;
   border-top: 4px solid;
+
   img {
+    width: 100%;
     height: auto;
   }
+
   &:hover,
   &:focus {
     img {
@@ -40,7 +43,7 @@
   }
 }
 
-.postcard--primary {
+.postcard--landscape {
   @extend %u-span12;
 
   .postcard__inner {
@@ -60,15 +63,17 @@
 
 }
 
+.postcard--primary {
 
-@mixin postcard__taxo ($color) {
-  .postcard__taxo-label {
-    background: lighten($color,5%);
+  .postcard__main {
+    @extend %u-span1of3;
   }
 
-  .postcard__taxo-link {
-    border-color: $color;
+  .postcard__cover {
+    @extend %u-span2of3;
+    @extend %GColumn--oppos;
   }
+
 }
 
 .postcard__taxo {
@@ -77,50 +82,18 @@
   left: 28px;
 }
 
-.postcard__taxo-label {
-  display: inline-block;
-  @include u-inlineBlockSize(1);
-  @include translate(0,-80%);
-  @include transition-property(transform);
-  @include transition-duration(0.3s);
-  -webkit-backface-visibility: hidden;
-}
-
-.postcard__taxo-link {
-  display: block;
-  border-radius: 0;
-  color: white;
-  border-top: 4px solid;
-
-  &:hover,
-  &:focus {
-    color: white;
-    .postcard__taxo-label {
-      @include translate(0,0);
-    }
-  }
-  overflow: hidden;
-}
-
-$taxos: (
-  'design' $prj-color--green-sea,
-  'frontend' $prj-color--blue,
-  'backend' $prj-color--purple,
-  'content' $prj-color--gray-hard,
-  'tools' $prj-color--night,
-  'business' $prj-color--orange
-);
+$taxos: techultyTaxos();
 @each $taxo in $taxos {
+
   $name: nth($taxo, 1);
   $color: nth($taxo, 2);
+
   .postcard--#{$name} {
-    @include postcard__taxo($color);
+    @include ribbonColor($color);
+
     .postcard__media {
       border-color: $color;
     }
+
   }
 }
-
-
-
-

@@ -3,28 +3,13 @@
   @extend %u-paddingHS;
 }
 
-.section--featured  {
-  @extend .whitecard;
-  @extend %u-marginBL;
-}
-
 .featured {
-  @extend %GCell;
-  @extend %u-span1of3;
-}
-
-.featured--first {
-  border-bottom: 1px solid $prj-color--gray-silver;
-  .postcard__main {
+  .postcard {
+    @extend %GCell;
     @extend %u-span1of3;
   }
-  .postcard__cover {
-    @extend %u-span2of3;
-    @extend %GColumn--oppos;
-  }
 }
 
-
-
-
-
+.zone--featured {
+  @extend %u-marginBL;
+}

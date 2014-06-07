@@ -5,3 +5,25 @@
 @mixin droidNaskhFamily {
   font-family: "Droid Arabic Naskh", 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif;
 }
+
+@function techultyLevels() {
+  @return (
+    'bgn' $prj-color--blue,
+    'int' $prj-color--green,
+    'adv' $prj-color--ruby
+  );
+}
+@function techultyTaxos() {
+  @return (
+    'design' $prj-color--green-sea,
+    'frontend' $prj-color--blue,
+    'backend' $prj-color--purple,
+    'content' $prj-color--gray-hard,
+    'tools' $prj-color--night,
+    'business' $prj-color--orange
+  );
+}
+
+.island {
+  @extend %u-paddingAS;
+}

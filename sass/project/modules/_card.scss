@@ -1,0 +1,42 @@
+.card {
+  box-shadow: $prj-color--gray-blue 0 0 1px 0;
+  border-radius: 2px;
+  background: white;
+}
+
+.card--primary,
+.card--rev,
+.card--primary-alt {
+  color: white;
+  a {
+    color: white;
+    &:hover,
+    &:focus {
+      color: $prj-color--night;
+    }
+  }
+}
+
+.card--rev {
+  background: $prj-color--night;
+  a {
+    &:hover,
+    &:focus {
+      color: $prj-color--orange-medium;
+    }
+  }
+}
+
+.card--primary-alt {
+  background: $prj-color--orange;
+  // a {
+  //   &:hover,
+  //   &:focus {
+  //     color: $prj-color--orange-light;
+  //   }
+  // }
+}
+
+.card--primary {
+  background: $prj-color--blue-royal;
+}

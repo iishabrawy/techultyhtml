@@ -28,7 +28,7 @@ a {
 
 
   @include transition-property(background, color, border, opacity);
-  @include transition-duration(0.5s);
+  @include transition-duration(0.3s);
   // @include transition-delay(0, 0, 0.3s);
 }
 
